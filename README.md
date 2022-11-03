@@ -5,7 +5,7 @@ This application allows the client to get the list of all fixtures and also the 
 
 ## Local Setup:
 ```
-git clone zuju-digital
+git clone git@github.com:avinara/zuju-digital.git
 cd ../path/to/zuju-digital
 npm install
 npm run start
