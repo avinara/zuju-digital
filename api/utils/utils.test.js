@@ -11,7 +11,7 @@ describe('utils', () => {
 
     let errorResponse =  {
         code: -1,
-        error_message: errorObj
+        error_object: errorObj
     }
     test('test createNewErrorResponse', () => {
         expect(utils.createNewErrorResponse(errorObj)).toStrictEqual(errorResponse);

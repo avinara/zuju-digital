@@ -18,7 +18,7 @@ class Utils {
     createNewErrorResponse(error) {
         return {
             code: -1,
-            error_message: error
+            error_object: error
         }
     }
 }

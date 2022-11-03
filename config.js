@@ -1,9 +1,9 @@
 'use strict'
 
 exports.MYSQLDB = {
-    host: '127.0.0.1',
-    user: 'root',
-    password: 'password@123',
+    host: 'zuju-digital.c9yliktawosh.ap-southeast-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'zujudigital123',
     database: 'zuju_digital'
 };
 exports.MAX_FIXTURE_LIMIT = 10;
