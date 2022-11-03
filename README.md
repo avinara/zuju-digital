@@ -4,6 +4,10 @@
 This application allows the client to get the list of all fixtures and also the Match Days.
 
 ## Local Setup:
+
+### Pre-requisites:
+* Test with node version > 8.0.0
+
 ```
 git clone git@github.com:avinara/zuju-digital.git
 cd ../path/to/zuju-digital
