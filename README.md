@@ -164,4 +164,82 @@ Response 200 OK
     }
 }
 ```
-  
+ 
+
+### 3. Create New Fixtures
+
+```
+curl --location --request POST 'http://localhost:3000/v1/fixtures/create' \
+--header 'Content-Type: application/json' \
+--data-raw '    {
+        "tournament_id": 1,
+        "team_1": "Liverpool",
+        "team_2": "Leicester City",
+        "home_team": "Liverpool",
+        "fixture_time": "2022-11-19 20:00:00"
+    }'
+
+Request 
+
+{
+	"tournament_id": 1,
+	"team_1": "Liverpool",
+	"team_2": "Leicester City",
+	"home_team": "Liverpool",
+	"fixture_time": "2022-11-19 20:00:00"
+}
+
+Response 200 OK
+
+{
+    "code": 0,
+    "result": "Successfully inserted the fixture into the DB"
+}
+
+4xx Error Response 
+
+{
+    "code": -1,
+    "error_object": {
+    	"error_code" : 400001,
+	"error_message": "Error, Unable to insert to DB"
+    }
+}
+```
+
+### 4. Update Existing Fixtures
+
+```
+curl --location --request POST 'http://localhost:3000/v1/fixtures/update' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id":1,
+    "tournament_id":1,
+    "team_1_score":1
+}'
+
+Request 
+
+{
+    "id":1,
+    "tournament_id":1,
+    "team_1_score":1
+}
+
+Response 200 OK
+
+{
+    "code": 0,
+    "result": "Successfully inserted the fixture into the DB"
+}
+
+4xx Error Response 
+
+{
+    "code": -1,
+    "error_object": {
+    	"error_code" : 400001,
+	"error_message": "Error, Unable to insert to DB"
+    }
+}
+```
